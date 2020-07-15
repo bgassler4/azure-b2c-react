@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+A quick react sample app with Azure B2C integration
+
+This app uses this node package: https://www.npmjs.com/package/react-azure-adb2c and used this article as a guide: https://medium.com/@fiqriismail/how-to-secure-your-reactjs-frontend-with-azure-ad-b2c-8fd165f602e8
+
 ## Available Scripts
 
 In the project directory, you can run:
