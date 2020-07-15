@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import "./App.css";
+import BaseRouter from "./components/BaseRouter";
+import authentication from "react-azure-b2c";
+import decodeJWT from "jwt-decode";
+import Logout from "./components/Logout";
 
 function App() {
+  const token = authentication.getAccessToken();
+  const decoded = decodeJWT(token.accessToken);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <BaseRouter></BaseRouter>
     </div>
   );
 }
